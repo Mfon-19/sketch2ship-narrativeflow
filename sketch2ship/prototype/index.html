@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NarrativeFlow | Storytelling CMS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="app-nav">
+        <div class="logo">NarrativeFlow</div>
+        <div class="nav-links">
+            <button id="btn-library">Library</button>
+            <button id="btn-write" class="primary">Write</button>
+            <div id="user-profile" class="user-tag">Author Mode</div>
+        </div>
+    </nav>
+
+    <main id="app-root">
+        <!-- Views will be injected here -->
+        <section id="view-dashboard" class="view hidden">
+            <header>
+                <h1>Your Stories</h1>
+                <button id="btn-new-story">+ New Story</button>
+            </header>
+            <div id="story-grid" class="grid"></div>
+        </section>
+
+        <section id="view-editor" class="view">
+            <div class="editor-controls">
+                <input type="text" id="story-title" placeholder="Story Title..." class="title-input">
+                <div class="editor-actions">
+                    <button id="btn-save">Save Draft</button>
+                    <button id="btn-publish">Publish Chapter</button>
+                    <button id="btn-preview-toggle">Toggle Preview</button>
+                </div>
+            </div>
+            <div class="editor-container">
+                <textarea id="markdown-input" placeholder="Start writing your masterpiece... (Markdown supported)"></textarea>
+                <div id="markdown-preview" class="hidden"></div>
+            </div>
+            <div class="status-bar">
+                <span id="save-status">All changes saved locally</span>
+                <span id="word-count">0 words</span>
+            </div>
+        </section>
+
+        <section id="view-reader" class="view hidden">
+            <article class="reader-content">
+                <h1 id="reader-title"></h1>
+                <div id="reader-body"></div>
+                <nav class="chapter-nav">
+                    <button disabled>Previous</button>
+                    <button disabled>Next</button>
+                </nav>
+            </article>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

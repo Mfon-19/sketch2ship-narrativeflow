@@ -1,0 +1,142 @@
+:root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --accent: #2563eb;
+    --muted: #f3f4f6;
+    --border: #e5e7eb;
+    --serif: 'Georgia', serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--sans);
+    color: var(--text);
+    background: var(--bg);
+}
+
+.app-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: -0.025em;
+}
+
+.nav-links button {
+    background: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+button.primary {
+    background: var(--accent);
+    color: white;
+    border-radius: 6px;
+}
+
+.view {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Editor Styles */
+.editor-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.title-input {
+    font-size: 2rem;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    width: 60%;
+}
+
+.editor-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 60vh;
+    gap: 2rem;
+}
+
+textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    resize: none;
+    font-family: var(--serif);
+}
+
+#markdown-preview {
+    font-family: var(--serif);
+    line-height: 1.8;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.status-bar {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #666;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+}
+
+/* Reader View */
+.reader-content {
+    max-width: 650px;
+    margin: 4rem auto;
+}
+
+#reader-title {
+    font-family: var(--serif);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#reader-body {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    line-height: 1.8;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.story-card {
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.story-card:hover {
+    border-color: var(--accent);
+}
