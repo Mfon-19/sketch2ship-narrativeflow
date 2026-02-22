@@ -1,0 +1,7 @@
+body { font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; margin: 0; background: #faf8f3; color: #2f2d2a; }
+.wrap { max-width: 900px; margin: 48px auto; padding: 0 20px; }
+.card { background: #fff; border: 1px solid #e5dfd3; border-radius: 12px; padding: 20px; }
+h1 { margin: 0 0 10px; font-size: 30px; }
+p { line-height: 1.6; }
+ul { margin: 10px 0 0; padding-left: 18px; line-height: 1.7; }
+.tag { display: inline-block; margin-bottom: 10px; padding: 4px 8px; border: 1px solid #ddd7ca; border-radius: 999px; font-size: 12px; background: #f6f2ea; }
